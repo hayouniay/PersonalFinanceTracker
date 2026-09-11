@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include
+CXX_INCLUDES = -I/home/developer/Personal_projects/PersonalFinanceTracker/build/finance_tests_autogen/include -I/home/developer/Personal_projects/PersonalFinanceTracker/include
 
 CXX_FLAGS = -std=c++17
 

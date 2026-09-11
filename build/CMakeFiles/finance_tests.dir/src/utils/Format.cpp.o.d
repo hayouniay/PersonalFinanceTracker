@@ -1,7 +1,7 @@
 CMakeFiles/finance_tests.dir/src/utils/Format.cpp.o: \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/utils/Format.cpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/src/utils/Format.cpp \
  /usr/include/stdc-predef.h \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/utils/Format.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/utils/Format.hpp \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

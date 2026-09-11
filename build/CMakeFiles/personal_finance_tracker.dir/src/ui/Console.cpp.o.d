@@ -1,9 +1,9 @@
 CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o: \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/ui/Console.cpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/src/ui/Console.cpp \
  /usr/include/stdc-predef.h \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/ui/Console.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/FinanceManager.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/Account.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/ui/Console.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/FinanceManager.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/Account.hpp \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -118,19 +118,19 @@ CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/Budget.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/Goal.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/RecurringTransaction.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/Transaction.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/Budget.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/Goal.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/RecurringTransaction.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/Transaction.hpp \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/Category.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/services/CsvService.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/services/ReportService.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/utils/Date.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/utils/Format.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/Category.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/services/CsvService.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/services/ReportService.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/utils/Date.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/utils/Format.hpp \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
  /usr/include/c++/13/ios /usr/include/c++/13/exception \
  /usr/include/c++/13/bits/exception_ptr.h \

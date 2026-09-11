@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include
+CXX_INCLUDES = -I/home/developer/Personal_projects/PersonalFinanceTracker/include
 
 CXX_FLAGS = -Wall -Wextra -Wpedantic -std=c++17
 

@@ -1,0 +1,455 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+
+        // ── CLEAN ─────────────────────────────────────────────────────────────
+        {
+            "label": "Finance - Clean Build",
+            "type": "shell",
+            "command": "rm -rf build",
+            "problemMatcher": [],
+            "icon": {
+                "id": "trash",
+                "color": "terminal.ansiRed"
+            }
+        },
+        {
+            "label": "Finance - Clean CMake Cache",
+            "type": "shell",
+            "command": "rm -rf build/CMakeCache.txt build/CMakeFiles build/Makefile build/cmake_install.cmake",
+            "problemMatcher": [],
+            "icon": {
+                "id": "trash",
+                "color": "terminal.ansiRed"
+            }
+        },
+        {
+            "label": "Finance - Clean Runtime Data",
+            "type": "shell",
+            "command": "rm -f data/finance.db && rm -f data/backups/* && rm -f reports/*",
+            "problemMatcher": [],
+            "icon": {
+                "id": "database",
+                "color": "terminal.ansiRed"
+            }
+        },
+
+        // ── BUILD ─────────────────────────────────────────────────────────────
+        {
+            "label": "Finance - Build All",
+            "type": "shell",
+            "command": "cmake --build build -j$(nproc)",
+            "dependsOn": [
+                "Finance - Configure CMake"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "icon": {
+                "id": "rocket",
+                "color": "terminal.ansiGreen"
+            }
+        },
+        {
+            "label": "Finance - Build Console",
+            "type": "shell",
+            "command": "cmake --build build --target personal_finance_tracker -j$(nproc)",
+            "dependsOn": [
+                "Finance - Configure Console"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "icon": {
+                "id": "terminal",
+                "color": "terminal.ansiGreen"
+            }
+        },
+        {
+            "label": "Finance - Build Qt5 GUI",
+            "type": "shell",
+            "command": "cmake --build build --target personal_finance_tracker_qt -j$(nproc)",
+            "dependsOn": [
+                "Finance - Configure Qt5"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "icon": {
+                "id": "window",
+                "color": "terminal.ansiCyan"
+            }
+        },
+        {
+            "label": "Finance - Rebuild All",
+            "type": "shell",
+            "command": "cmake --build build --clean-first -j$(nproc)",
+            "dependsOn": [
+                "Finance - Configure Qt5"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "icon": {
+                "id": "sync",
+                "color": "terminal.ansiYellow"
+            }
+        },
+
+        // ── CMAKE CONFIGURATION ───────────────────────────────────────────────
+        {
+            "label": "Finance - Configure CMake",
+            "type": "shell",
+            "command": "cmake -S . -B build -DBUILD_QT5_GUI=ON",
+            "problemMatcher": [],
+            "icon": {
+                "id": "gear",
+                "color": "terminal.ansiBlue"
+            }
+        },
+        {
+            "label": "Finance - Configure Console",
+            "type": "shell",
+            "command": "cmake -S . -B build -DBUILD_QT5_GUI=OFF",
+            "problemMatcher": [],
+            "icon": {
+                "id": "terminal",
+                "color": "terminal.ansiBlue"
+            }
+        },
+        {
+            "label": "Finance - Configure Qt5",
+            "type": "shell",
+            "command": "cmake -S . -B build -DBUILD_QT5_GUI=ON",
+            "problemMatcher": [],
+            "icon": {
+                "id": "window",
+                "color": "terminal.ansiCyan"
+            }
+        },
+
+        // ── BUILD + TEST ──────────────────────────────────────────────────────
+        {
+            "label": "Finance - Build Tests",
+            "type": "shell",
+            "command": "cmake --build build --target finance_tests -j$(nproc)",
+            "dependsOn": [
+                "Finance - Configure Console"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "icon": {
+                "id": "beaker",
+                "color": "terminal.ansiYellow"
+            }
+        },
+        {
+            "label": "Finance - Run Tests",
+            "type": "shell",
+            "command": "ctest --test-dir build --output-on-failure",
+            "dependsOn": [
+                "Finance - Build Tests"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "icon": {
+                "id": "beaker",
+                "color": "terminal.ansiGreen"
+            }
+        },
+        {
+            "label": "Finance - Build and Run Tests",
+            "type": "shell",
+            "command": "cmake --build build --target finance_tests -j$(nproc) && ctest --test-dir build --output-on-failure",
+            "dependsOn": [
+                "Finance - Configure Console"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "icon": {
+                "id": "beaker",
+                "color": "terminal.ansiGreen"
+            }
+        },
+
+        // ── RUN ───────────────────────────────────────────────────────────────
+        {
+            "label": "Finance - Run Console",
+            "type": "shell",
+            "command": "./build/personal_finance_tracker",
+            "dependsOn": [
+                "Finance - Build Console"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "focus": true
+            },
+            "icon": {
+                "id": "terminal",
+                "color": "terminal.ansiGreen"
+            }
+        },
+        {
+            "label": "Finance - Run Qt5 GUI",
+            "type": "shell",
+            "command": "./build/personal_finance_tracker_qt",
+            "dependsOn": [
+                "Finance - Build Qt5 GUI"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "icon": {
+                "id": "window",
+                "color": "terminal.ansiCyan"
+            }
+        },
+
+        // ── MAKEFILE ──────────────────────────────────────────────────────────
+        {
+            "label": "Finance - Make Build",
+            "type": "shell",
+            "command": "make -j$(nproc)",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "icon": {
+                "id": "hammer",
+                "color": "terminal.ansiGreen"
+            }
+        },
+        {
+            "label": "Finance - Make Test",
+            "type": "shell",
+            "command": "make test",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "icon": {
+                "id": "beaker",
+                "color": "terminal.ansiGreen"
+            }
+        },
+        {
+            "label": "Finance - Make Run Console",
+            "type": "shell",
+            "command": "make run",
+            "dependsOn": [
+                "Finance - Make Build"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "focus": true
+            },
+            "icon": {
+                "id": "terminal",
+                "color": "terminal.ansiGreen"
+            }
+        },
+        {
+            "label": "Finance - Make Run Qt5",
+            "type": "shell",
+            "command": "make run-qt",
+            "dependsOn": [
+                "Finance - Make Build"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            },
+            "icon": {
+                "id": "window",
+                "color": "terminal.ansiCyan"
+            }
+        },
+        {
+            "label": "Finance - Make Clean",
+            "type": "shell",
+            "command": "make clean",
+            "problemMatcher": [],
+            "icon": {
+                "id": "trash",
+                "color": "terminal.ansiRed"
+            }
+        },
+
+        // ── DATABASE / DATA ───────────────────────────────────────────────────
+        {
+            "label": "Finance - Open SQLite Database",
+            "type": "shell",
+            "command": "sqlite3 data/finance.db",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "icon": {
+                "id": "database",
+                "color": "terminal.ansiYellow"
+            }
+        },
+        {
+            "label": "Finance - Show Database Tables",
+            "type": "shell",
+            "command": "sqlite3 data/finance.db '.tables'",
+            "problemMatcher": [],
+            "icon": {
+                "id": "database",
+                "color": "terminal.ansiBlue"
+            }
+        },
+        {
+            "label": "Finance - Backup Database",
+            "type": "shell",
+            "command": "mkdir -p data/backups && sqlite3 data/finance.db \".backup 'data/backups/finance-$(date +%Y%m%d-%H%M%S).db'\"",
+            "problemMatcher": [],
+            "icon": {
+                "id": "save",
+                "color": "terminal.ansiCyan"
+            }
+        },
+
+        // ── REPORTS ───────────────────────────────────────────────────────────
+        {
+            "label": "Finance - Generate Monthly Chart",
+            "type": "shell",
+            "command": "./build/personal_finance_tracker",
+            "dependsOn": [
+                "Finance - Build Console"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "icon": {
+                "id": "graph",
+                "color": "terminal.ansiBlue"
+            }
+        },
+
+        // ── WSL SETUP ─────────────────────────────────────────────────────────
+        {
+            "label": "Finance - Install WSL Dependencies",
+            "type": "shell",
+            "command": "sudo apt update && sudo apt install -y build-essential cmake libsqlite3-dev",
+            "problemMatcher": [],
+            "icon": {
+                "id": "package",
+                "color": "terminal.ansiCyan"
+            }
+        },
+        {
+            "label": "Finance - Install Qt5 WSL Dependencies",
+            "type": "shell",
+            "command": "sudo apt update && sudo apt install -y build-essential cmake qtbase5-dev qtbase5-dev-tools libsqlite3-dev",
+            "problemMatcher": [],
+            "icon": {
+                "id": "package",
+                "color": "terminal.ansiCyan"
+            }
+        },
+        {
+            "label": "Finance - Verify Qt5",
+            "type": "shell",
+            "command": "qmake --version && pkg-config --modversion Qt5Widgets",
+            "problemMatcher": [],
+            "icon": {
+                "id": "check",
+                "color": "terminal.ansiGreen"
+            }
+        },
+
+        // ── FORMAT ────────────────────────────────────────────────────────────
+        {
+            "label": "Finance - Format Current File",
+            "type": "shell",
+            "command": "clang-format -i ${file}",
+            "problemMatcher": [],
+            "icon": {
+                "id": "symbol-color",
+                "color": "terminal.ansiGreen"
+            }
+        },
+        {
+            "label": "Finance - Format C++ Sources",
+            "type": "shell",
+            "command": "find include src tests -type f \\( -name '*.cpp' -o -name '*.hpp' -o -name '*.h' \\) -print0 | xargs -0 clang-format -i",
+            "problemMatcher": [],
+            "icon": {
+                "id": "symbol-color",
+                "color": "terminal.ansiGreen"
+            }
+        },
+
+        // ── FULL DEVELOPMENT WORKFLOWS ────────────────────────────────────────
+        {
+            "label": "Finance - Full Console Check",
+            "type": "shell",
+            "command": "cmake --build build -j$(nproc) && ctest --test-dir build --output-on-failure",
+            "dependsOn": [
+                "Finance - Configure Console"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "test",
+            "icon": {
+                "id": "verified",
+                "color": "terminal.ansiGreen"
+            }
+        },
+        {
+            "label": "Finance - Full Qt5 Check",
+            "type": "shell",
+            "command": "cmake --build build -j$(nproc) && ctest --test-dir build --output-on-failure",
+            "dependsOn": [
+                "Finance - Configure Qt5"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "icon": {
+                "id": "verified",
+                "color": "terminal.ansiCyan"
+            }
+        },
+        {
+            "label": "Finance - Clean Rebuild and Test",
+            "type": "shell",
+            "command": "rm -rf build && cmake -S . -B build -DBUILD_QT5_GUI=ON && cmake --build build -j$(nproc) && ctest --test-dir build --output-on-failure",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "test",
+            "icon": {
+                "id": "sync",
+                "color": "terminal.ansiGreen"
+            }
+        }
+    ]
+}

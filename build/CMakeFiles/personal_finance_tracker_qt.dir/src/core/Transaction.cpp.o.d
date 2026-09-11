@@ -1,7 +1,7 @@
 CMakeFiles/personal_finance_tracker_qt.dir/src/core/Transaction.cpp.o: \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/core/Transaction.cpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/src/core/Transaction.cpp \
  /usr/include/stdc-predef.h \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/Transaction.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/Transaction.hpp \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

@@ -1,7 +1,7 @@
 CMakeFiles/personal_finance_tracker_qt.dir/personal_finance_tracker_qt_autogen/mocs_compilation.cpp.o: \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/personal_finance_tracker_qt_autogen/mocs_compilation.cpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/build/personal_finance_tracker_qt_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/personal_finance_tracker_qt_autogen/2IQ7PFOKWM/moc_MainWindow.cpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/build/personal_finance_tracker_qt_autogen/2IQ7PFOKWM/moc_MainWindow.cpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -115,7 +115,7 @@ CMakeFiles/personal_finance_tracker_qt.dir/personal_finance_tracker_qt_autogen/m
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/personal_finance_tracker_qt_autogen/2IQ7PFOKWM/../../../include/qt/MainWindow.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/build/personal_finance_tracker_qt_autogen/2IQ7PFOKWM/../../../include/qt/MainWindow.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \

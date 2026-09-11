@@ -1,4 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/finance_tests_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/finance_tests_autogen.dir/ParseCache.txt"
+  "finance_tests_autogen"
+  "CMakeFiles/finance_tests.dir/finance_tests_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/finance_tests.dir/finance_tests_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/finance_tests.dir/src/core/Category.cpp.o"
   "CMakeFiles/finance_tests.dir/src/core/Category.cpp.o.d"
   "CMakeFiles/finance_tests.dir/src/core/Transaction.cpp.o"

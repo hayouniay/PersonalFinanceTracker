@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker
+CMAKE_SOURCE_DIR = /home/developer/Personal_projects/PersonalFinanceTracker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build
+CMAKE_BINARY_DIR = /home/developer/Personal_projects/PersonalFinanceTracker/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,9 +97,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles /home/developer/Personal_projects/PersonalFinanceTracker/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -140,6 +140,19 @@ personal_finance_tracker/fast:
 .PHONY : personal_finance_tracker/fast
 
 #=============================================================================
+# Target rules for targets named personal_finance_tracker_qt
+
+# Build rule for target.
+personal_finance_tracker_qt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 personal_finance_tracker_qt
+.PHONY : personal_finance_tracker_qt
+
+# fast build rule for target.
+personal_finance_tracker_qt/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/build
+.PHONY : personal_finance_tracker_qt/fast
+
+#=============================================================================
 # Target rules for targets named finance_tests
 
 # Build rule for target.
@@ -152,12 +165,87 @@ finance_tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/build
 .PHONY : finance_tests/fast
 
+#=============================================================================
+# Target rules for targets named personal_finance_tracker_qt_autogen
+
+# Build rule for target.
+personal_finance_tracker_qt_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 personal_finance_tracker_qt_autogen
+.PHONY : personal_finance_tracker_qt_autogen
+
+# fast build rule for target.
+personal_finance_tracker_qt_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt_autogen.dir/build.make CMakeFiles/personal_finance_tracker_qt_autogen.dir/build
+.PHONY : personal_finance_tracker_qt_autogen/fast
+
+#=============================================================================
+# Target rules for targets named finance_tests_autogen
+
+# Build rule for target.
+finance_tests_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 finance_tests_autogen
+.PHONY : finance_tests_autogen
+
+# fast build rule for target.
+finance_tests_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests_autogen.dir/build.make CMakeFiles/finance_tests_autogen.dir/build
+.PHONY : finance_tests_autogen/fast
+
+finance_tests_autogen/mocs_compilation.o: finance_tests_autogen/mocs_compilation.cpp.o
+.PHONY : finance_tests_autogen/mocs_compilation.o
+
+# target to build an object file
+finance_tests_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/finance_tests_autogen/mocs_compilation.cpp.o
+.PHONY : finance_tests_autogen/mocs_compilation.cpp.o
+
+finance_tests_autogen/mocs_compilation.i: finance_tests_autogen/mocs_compilation.cpp.i
+.PHONY : finance_tests_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+finance_tests_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/finance_tests_autogen/mocs_compilation.cpp.i
+.PHONY : finance_tests_autogen/mocs_compilation.cpp.i
+
+finance_tests_autogen/mocs_compilation.s: finance_tests_autogen/mocs_compilation.cpp.s
+.PHONY : finance_tests_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+finance_tests_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/finance_tests_autogen/mocs_compilation.cpp.s
+.PHONY : finance_tests_autogen/mocs_compilation.cpp.s
+
+personal_finance_tracker_qt_autogen/mocs_compilation.o: personal_finance_tracker_qt_autogen/mocs_compilation.cpp.o
+.PHONY : personal_finance_tracker_qt_autogen/mocs_compilation.o
+
+# target to build an object file
+personal_finance_tracker_qt_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/personal_finance_tracker_qt_autogen/mocs_compilation.cpp.o
+.PHONY : personal_finance_tracker_qt_autogen/mocs_compilation.cpp.o
+
+personal_finance_tracker_qt_autogen/mocs_compilation.i: personal_finance_tracker_qt_autogen/mocs_compilation.cpp.i
+.PHONY : personal_finance_tracker_qt_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+personal_finance_tracker_qt_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/personal_finance_tracker_qt_autogen/mocs_compilation.cpp.i
+.PHONY : personal_finance_tracker_qt_autogen/mocs_compilation.cpp.i
+
+personal_finance_tracker_qt_autogen/mocs_compilation.s: personal_finance_tracker_qt_autogen/mocs_compilation.cpp.s
+.PHONY : personal_finance_tracker_qt_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+personal_finance_tracker_qt_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/personal_finance_tracker_qt_autogen/mocs_compilation.cpp.s
+.PHONY : personal_finance_tracker_qt_autogen/mocs_compilation.cpp.s
+
 src/core/Category.o: src/core/Category.cpp.o
 .PHONY : src/core/Category.o
 
 # target to build an object file
 src/core/Category.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/core/Category.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/core/Category.cpp.o
 .PHONY : src/core/Category.cpp.o
 
@@ -167,6 +255,7 @@ src/core/Category.i: src/core/Category.cpp.i
 # target to preprocess a source file
 src/core/Category.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/core/Category.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/core/Category.cpp.i
 .PHONY : src/core/Category.cpp.i
 
@@ -176,6 +265,7 @@ src/core/Category.s: src/core/Category.cpp.s
 # target to generate assembly for a file
 src/core/Category.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/core/Category.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/core/Category.cpp.s
 .PHONY : src/core/Category.cpp.s
 
@@ -185,6 +275,7 @@ src/core/Transaction.o: src/core/Transaction.cpp.o
 # target to build an object file
 src/core/Transaction.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/core/Transaction.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/core/Transaction.cpp.o
 .PHONY : src/core/Transaction.cpp.o
 
@@ -194,6 +285,7 @@ src/core/Transaction.i: src/core/Transaction.cpp.i
 # target to preprocess a source file
 src/core/Transaction.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/core/Transaction.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/core/Transaction.cpp.i
 .PHONY : src/core/Transaction.cpp.i
 
@@ -203,6 +295,7 @@ src/core/Transaction.s: src/core/Transaction.cpp.s
 # target to generate assembly for a file
 src/core/Transaction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/core/Transaction.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/core/Transaction.cpp.s
 .PHONY : src/core/Transaction.cpp.s
 
@@ -230,12 +323,61 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/qt/MainWindow.o: src/qt/MainWindow.cpp.o
+.PHONY : src/qt/MainWindow.o
+
+# target to build an object file
+src/qt/MainWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/qt/MainWindow.cpp.o
+.PHONY : src/qt/MainWindow.cpp.o
+
+src/qt/MainWindow.i: src/qt/MainWindow.cpp.i
+.PHONY : src/qt/MainWindow.i
+
+# target to preprocess a source file
+src/qt/MainWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/qt/MainWindow.cpp.i
+.PHONY : src/qt/MainWindow.cpp.i
+
+src/qt/MainWindow.s: src/qt/MainWindow.cpp.s
+.PHONY : src/qt/MainWindow.s
+
+# target to generate assembly for a file
+src/qt/MainWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/qt/MainWindow.cpp.s
+.PHONY : src/qt/MainWindow.cpp.s
+
+src/qt/main_qt.o: src/qt/main_qt.cpp.o
+.PHONY : src/qt/main_qt.o
+
+# target to build an object file
+src/qt/main_qt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/qt/main_qt.cpp.o
+.PHONY : src/qt/main_qt.cpp.o
+
+src/qt/main_qt.i: src/qt/main_qt.cpp.i
+.PHONY : src/qt/main_qt.i
+
+# target to preprocess a source file
+src/qt/main_qt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/qt/main_qt.cpp.i
+.PHONY : src/qt/main_qt.cpp.i
+
+src/qt/main_qt.s: src/qt/main_qt.cpp.s
+.PHONY : src/qt/main_qt.s
+
+# target to generate assembly for a file
+src/qt/main_qt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/qt/main_qt.cpp.s
+.PHONY : src/qt/main_qt.cpp.s
+
 src/services/CsvService.o: src/services/CsvService.cpp.o
 .PHONY : src/services/CsvService.o
 
 # target to build an object file
 src/services/CsvService.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/services/CsvService.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/services/CsvService.cpp.o
 .PHONY : src/services/CsvService.cpp.o
 
@@ -245,6 +387,7 @@ src/services/CsvService.i: src/services/CsvService.cpp.i
 # target to preprocess a source file
 src/services/CsvService.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/services/CsvService.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/services/CsvService.cpp.i
 .PHONY : src/services/CsvService.cpp.i
 
@@ -254,6 +397,7 @@ src/services/CsvService.s: src/services/CsvService.cpp.s
 # target to generate assembly for a file
 src/services/CsvService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/services/CsvService.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/services/CsvService.cpp.s
 .PHONY : src/services/CsvService.cpp.s
 
@@ -263,6 +407,7 @@ src/services/FinanceManager.o: src/services/FinanceManager.cpp.o
 # target to build an object file
 src/services/FinanceManager.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/services/FinanceManager.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/services/FinanceManager.cpp.o
 .PHONY : src/services/FinanceManager.cpp.o
 
@@ -272,6 +417,7 @@ src/services/FinanceManager.i: src/services/FinanceManager.cpp.i
 # target to preprocess a source file
 src/services/FinanceManager.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/services/FinanceManager.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/services/FinanceManager.cpp.i
 .PHONY : src/services/FinanceManager.cpp.i
 
@@ -281,6 +427,7 @@ src/services/FinanceManager.s: src/services/FinanceManager.cpp.s
 # target to generate assembly for a file
 src/services/FinanceManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/services/FinanceManager.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/services/FinanceManager.cpp.s
 .PHONY : src/services/FinanceManager.cpp.s
 
@@ -290,6 +437,7 @@ src/services/ReportService.o: src/services/ReportService.cpp.o
 # target to build an object file
 src/services/ReportService.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/services/ReportService.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/services/ReportService.cpp.o
 .PHONY : src/services/ReportService.cpp.o
 
@@ -299,6 +447,7 @@ src/services/ReportService.i: src/services/ReportService.cpp.i
 # target to preprocess a source file
 src/services/ReportService.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/services/ReportService.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/services/ReportService.cpp.i
 .PHONY : src/services/ReportService.cpp.i
 
@@ -308,6 +457,7 @@ src/services/ReportService.s: src/services/ReportService.cpp.s
 # target to generate assembly for a file
 src/services/ReportService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/services/ReportService.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/services/ReportService.cpp.s
 .PHONY : src/services/ReportService.cpp.s
 
@@ -317,6 +467,7 @@ src/storage/Database.o: src/storage/Database.cpp.o
 # target to build an object file
 src/storage/Database.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/storage/Database.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/storage/Database.cpp.o
 .PHONY : src/storage/Database.cpp.o
 
@@ -326,6 +477,7 @@ src/storage/Database.i: src/storage/Database.cpp.i
 # target to preprocess a source file
 src/storage/Database.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/storage/Database.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/storage/Database.cpp.i
 .PHONY : src/storage/Database.cpp.i
 
@@ -335,6 +487,7 @@ src/storage/Database.s: src/storage/Database.cpp.s
 # target to generate assembly for a file
 src/storage/Database.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/storage/Database.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/storage/Database.cpp.s
 .PHONY : src/storage/Database.cpp.s
 
@@ -368,6 +521,7 @@ src/utils/Date.o: src/utils/Date.cpp.o
 # target to build an object file
 src/utils/Date.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/utils/Date.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/utils/Date.cpp.o
 .PHONY : src/utils/Date.cpp.o
 
@@ -377,6 +531,7 @@ src/utils/Date.i: src/utils/Date.cpp.i
 # target to preprocess a source file
 src/utils/Date.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/utils/Date.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/utils/Date.cpp.i
 .PHONY : src/utils/Date.cpp.i
 
@@ -386,6 +541,7 @@ src/utils/Date.s: src/utils/Date.cpp.s
 # target to generate assembly for a file
 src/utils/Date.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/utils/Date.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/utils/Date.cpp.s
 .PHONY : src/utils/Date.cpp.s
 
@@ -395,6 +551,7 @@ src/utils/Format.o: src/utils/Format.cpp.o
 # target to build an object file
 src/utils/Format.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/utils/Format.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/utils/Format.cpp.o
 .PHONY : src/utils/Format.cpp.o
 
@@ -404,6 +561,7 @@ src/utils/Format.i: src/utils/Format.cpp.i
 # target to preprocess a source file
 src/utils/Format.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/utils/Format.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/utils/Format.cpp.i
 .PHONY : src/utils/Format.cpp.i
 
@@ -413,6 +571,7 @@ src/utils/Format.s: src/utils/Format.cpp.s
 # target to generate assembly for a file
 src/utils/Format.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker.dir/build.make CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/personal_finance_tracker_qt.dir/build.make CMakeFiles/personal_finance_tracker_qt.dir/src/utils/Format.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/finance_tests.dir/build.make CMakeFiles/finance_tests.dir/src/utils/Format.cpp.s
 .PHONY : src/utils/Format.cpp.s
 
@@ -449,8 +608,17 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... finance_tests_autogen"
+	@echo "... personal_finance_tracker_qt_autogen"
 	@echo "... finance_tests"
 	@echo "... personal_finance_tracker"
+	@echo "... personal_finance_tracker_qt"
+	@echo "... finance_tests_autogen/mocs_compilation.o"
+	@echo "... finance_tests_autogen/mocs_compilation.i"
+	@echo "... finance_tests_autogen/mocs_compilation.s"
+	@echo "... personal_finance_tracker_qt_autogen/mocs_compilation.o"
+	@echo "... personal_finance_tracker_qt_autogen/mocs_compilation.i"
+	@echo "... personal_finance_tracker_qt_autogen/mocs_compilation.s"
 	@echo "... src/core/Category.o"
 	@echo "... src/core/Category.i"
 	@echo "... src/core/Category.s"
@@ -460,6 +628,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/qt/MainWindow.o"
+	@echo "... src/qt/MainWindow.i"
+	@echo "... src/qt/MainWindow.s"
+	@echo "... src/qt/main_qt.o"
+	@echo "... src/qt/main_qt.i"
+	@echo "... src/qt/main_qt.s"
 	@echo "... src/services/CsvService.o"
 	@echo "... src/services/CsvService.i"
 	@echo "... src/services/CsvService.s"

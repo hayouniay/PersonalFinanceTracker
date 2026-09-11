@@ -1,5 +1,5 @@
-/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/personal_finance_tracker_qt_autogen/2IQ7PFOKWM/moc_MainWindow.cpp: /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/qt/MainWindow.hpp \
-  /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/personal_finance_tracker_qt_autogen/moc_predefs.h \
+/home/developer/Personal_projects/PersonalFinanceTracker/build/personal_finance_tracker_qt_autogen/2IQ7PFOKWM/moc_MainWindow.cpp: /home/developer/Personal_projects/PersonalFinanceTracker/include/qt/MainWindow.hpp \
+  /home/developer/Personal_projects/PersonalFinanceTracker/build/personal_finance_tracker_qt_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

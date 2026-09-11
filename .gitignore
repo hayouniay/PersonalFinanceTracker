@@ -1,0 +1,8 @@
+build/
+*.db
+*.db-journal
+
+# Qt5 build artifacts
+build-qt/
+*.user
+*.pro.user

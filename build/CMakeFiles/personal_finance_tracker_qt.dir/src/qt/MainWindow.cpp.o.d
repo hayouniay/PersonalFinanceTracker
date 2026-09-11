@@ -1,7 +1,7 @@
 CMakeFiles/personal_finance_tracker_qt.dir/src/qt/MainWindow.cpp.o: \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/qt/MainWindow.cpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/src/qt/MainWindow.cpp \
  /usr/include/stdc-predef.h \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/qt/MainWindow.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/qt/MainWindow.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -285,16 +285,16 @@ CMakeFiles/personal_finance_tracker_qt.dir/src/qt/MainWindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/Category.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/FinanceManager.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/Account.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/Budget.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/Goal.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/RecurringTransaction.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/core/Transaction.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/services/CsvService.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/services/ReportService.hpp \
- /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/include/utils/Date.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/Category.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/FinanceManager.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/Account.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/Budget.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/Goal.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/RecurringTransaction.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/core/Transaction.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/services/CsvService.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/services/ReportService.hpp \
+ /home/developer/Personal_projects/PersonalFinanceTracker/include/utils/Date.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
@@ -320,20 +320,26 @@ CMakeFiles/personal_finance_tracker_qt.dir/src/qt/MainWindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDate \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDateEdit \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdatetimeedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcalendar.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDir \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileinfo.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFileDialog \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qfiledialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileinfo.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QFileInfo \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileinfo.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFormLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qformlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLayout \
@@ -371,24 +377,18 @@ CMakeFiles/personal_finance_tracker_qt.dir/src/qt/MainWindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSplitter \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsplitter.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QStandardPaths \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstandardpaths.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTabWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtablewidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtableview.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTabWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextEdit \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextdocument.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QDir \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QStandardPaths \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qstandardpaths.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QDate \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QFileInfo \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfileinfo.h \
  /usr/include/c++/13/fstream /usr/include/c++/13/istream \
  /usr/include/c++/13/ios /usr/include/c++/13/bits/basic_ios.h \
  /usr/include/c++/13/bits/locale_facets.h /usr/include/c++/13/cwctype \

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker
+CMAKE_SOURCE_DIR = /home/developer/Personal_projects/PersonalFinanceTracker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build
+CMAKE_BINARY_DIR = /home/developer/Personal_projects/PersonalFinanceTracker/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/personal_finance_tracker.dir/depend.make
@@ -72,142 +72,142 @@ include CMakeFiles/personal_finance_tracker.dir/flags.make
 CMakeFiles/personal_finance_tracker.dir/src/main.cpp.o: CMakeFiles/personal_finance_tracker.dir/flags.make
 CMakeFiles/personal_finance_tracker.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/personal_finance_tracker.dir/src/main.cpp.o: CMakeFiles/personal_finance_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/main.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/main.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/main.cpp.o -c /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/main.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/main.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/main.cpp.o -c /home/developer/Personal_projects/PersonalFinanceTracker/src/main.cpp
 
 CMakeFiles/personal_finance_tracker.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/personal_finance_tracker.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/main.cpp > CMakeFiles/personal_finance_tracker.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/PersonalFinanceTracker/src/main.cpp > CMakeFiles/personal_finance_tracker.dir/src/main.cpp.i
 
 CMakeFiles/personal_finance_tracker.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/personal_finance_tracker.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/main.cpp -o CMakeFiles/personal_finance_tracker.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/PersonalFinanceTracker/src/main.cpp -o CMakeFiles/personal_finance_tracker.dir/src/main.cpp.s
 
 CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.o: CMakeFiles/personal_finance_tracker.dir/flags.make
 CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.o: ../src/core/Transaction.cpp
 CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.o: CMakeFiles/personal_finance_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.o -c /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/core/Transaction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.o -c /home/developer/Personal_projects/PersonalFinanceTracker/src/core/Transaction.cpp
 
 CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/core/Transaction.cpp > CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/PersonalFinanceTracker/src/core/Transaction.cpp > CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.i
 
 CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/core/Transaction.cpp -o CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/PersonalFinanceTracker/src/core/Transaction.cpp -o CMakeFiles/personal_finance_tracker.dir/src/core/Transaction.cpp.s
 
 CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.o: CMakeFiles/personal_finance_tracker.dir/flags.make
 CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.o: ../src/core/Category.cpp
 CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.o: CMakeFiles/personal_finance_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.o -c /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/core/Category.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.o -c /home/developer/Personal_projects/PersonalFinanceTracker/src/core/Category.cpp
 
 CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/core/Category.cpp > CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/PersonalFinanceTracker/src/core/Category.cpp > CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.i
 
 CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/core/Category.cpp -o CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/PersonalFinanceTracker/src/core/Category.cpp -o CMakeFiles/personal_finance_tracker.dir/src/core/Category.cpp.s
 
 CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.o: CMakeFiles/personal_finance_tracker.dir/flags.make
 CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.o: ../src/services/FinanceManager.cpp
 CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.o: CMakeFiles/personal_finance_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.o -c /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/services/FinanceManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.o -c /home/developer/Personal_projects/PersonalFinanceTracker/src/services/FinanceManager.cpp
 
 CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/services/FinanceManager.cpp > CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/PersonalFinanceTracker/src/services/FinanceManager.cpp > CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.i
 
 CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/services/FinanceManager.cpp -o CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/PersonalFinanceTracker/src/services/FinanceManager.cpp -o CMakeFiles/personal_finance_tracker.dir/src/services/FinanceManager.cpp.s
 
 CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.o: CMakeFiles/personal_finance_tracker.dir/flags.make
 CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.o: ../src/services/CsvService.cpp
 CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.o: CMakeFiles/personal_finance_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.o -c /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/services/CsvService.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.o -c /home/developer/Personal_projects/PersonalFinanceTracker/src/services/CsvService.cpp
 
 CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/services/CsvService.cpp > CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/PersonalFinanceTracker/src/services/CsvService.cpp > CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.i
 
 CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/services/CsvService.cpp -o CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/PersonalFinanceTracker/src/services/CsvService.cpp -o CMakeFiles/personal_finance_tracker.dir/src/services/CsvService.cpp.s
 
 CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.o: CMakeFiles/personal_finance_tracker.dir/flags.make
 CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.o: ../src/services/ReportService.cpp
 CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.o: CMakeFiles/personal_finance_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.o -c /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/services/ReportService.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.o -c /home/developer/Personal_projects/PersonalFinanceTracker/src/services/ReportService.cpp
 
 CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/services/ReportService.cpp > CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/PersonalFinanceTracker/src/services/ReportService.cpp > CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.i
 
 CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/services/ReportService.cpp -o CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/PersonalFinanceTracker/src/services/ReportService.cpp -o CMakeFiles/personal_finance_tracker.dir/src/services/ReportService.cpp.s
 
 CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.o: CMakeFiles/personal_finance_tracker.dir/flags.make
 CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.o: ../src/storage/Database.cpp
 CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.o: CMakeFiles/personal_finance_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.o -c /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/storage/Database.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.o -c /home/developer/Personal_projects/PersonalFinanceTracker/src/storage/Database.cpp
 
 CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/storage/Database.cpp > CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/PersonalFinanceTracker/src/storage/Database.cpp > CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.i
 
 CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/storage/Database.cpp -o CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/PersonalFinanceTracker/src/storage/Database.cpp -o CMakeFiles/personal_finance_tracker.dir/src/storage/Database.cpp.s
 
 CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.o: CMakeFiles/personal_finance_tracker.dir/flags.make
 CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.o: ../src/utils/Date.cpp
 CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.o: CMakeFiles/personal_finance_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.o -c /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/utils/Date.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.o -c /home/developer/Personal_projects/PersonalFinanceTracker/src/utils/Date.cpp
 
 CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/utils/Date.cpp > CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/PersonalFinanceTracker/src/utils/Date.cpp > CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.i
 
 CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/utils/Date.cpp -o CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/PersonalFinanceTracker/src/utils/Date.cpp -o CMakeFiles/personal_finance_tracker.dir/src/utils/Date.cpp.s
 
 CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.o: CMakeFiles/personal_finance_tracker.dir/flags.make
 CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.o: ../src/utils/Format.cpp
 CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.o: CMakeFiles/personal_finance_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.o -c /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/utils/Format.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.o -c /home/developer/Personal_projects/PersonalFinanceTracker/src/utils/Format.cpp
 
 CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/utils/Format.cpp > CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/PersonalFinanceTracker/src/utils/Format.cpp > CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.i
 
 CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/utils/Format.cpp -o CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/PersonalFinanceTracker/src/utils/Format.cpp -o CMakeFiles/personal_finance_tracker.dir/src/utils/Format.cpp.s
 
 CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o: CMakeFiles/personal_finance_tracker.dir/flags.make
 CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o: ../src/ui/Console.cpp
 CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o: CMakeFiles/personal_finance_tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o -c /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/ui/Console.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o -MF CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o.d -o CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.o -c /home/developer/Personal_projects/PersonalFinanceTracker/src/ui/Console.cpp
 
 CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/ui/Console.cpp > CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/developer/Personal_projects/PersonalFinanceTracker/src/ui/Console.cpp > CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.i
 
 CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/src/ui/Console.cpp -o CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/developer/Personal_projects/PersonalFinanceTracker/src/ui/Console.cpp -o CMakeFiles/personal_finance_tracker.dir/src/ui/Console.cpp.s
 
 # Object files for target personal_finance_tracker
 personal_finance_tracker_OBJECTS = \
@@ -238,7 +238,7 @@ personal_finance_tracker: CMakeFiles/personal_finance_tracker.dir/src/ui/Console
 personal_finance_tracker: CMakeFiles/personal_finance_tracker.dir/build.make
 personal_finance_tracker: /usr/lib/x86_64-linux-gnu/libsqlite3.so
 personal_finance_tracker: CMakeFiles/personal_finance_tracker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable personal_finance_tracker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable personal_finance_tracker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/personal_finance_tracker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -250,6 +250,6 @@ CMakeFiles/personal_finance_tracker.dir/clean:
 .PHONY : CMakeFiles/personal_finance_tracker.dir/clean
 
 CMakeFiles/personal_finance_tracker.dir/depend:
-	cd /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles/personal_finance_tracker.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/developer/Personal_projects/PersonalFinanceTracker/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/developer/Personal_projects/PersonalFinanceTracker /home/developer/Personal_projects/PersonalFinanceTracker /home/developer/Personal_projects/PersonalFinanceTracker/build /home/developer/Personal_projects/PersonalFinanceTracker/build /home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles/personal_finance_tracker.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/personal_finance_tracker.dir/depend
 

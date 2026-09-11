@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker
+CMAKE_SOURCE_DIR = /home/developer/Personal_projects/PersonalFinanceTracker
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build
+CMAKE_BINARY_DIR = /home/developer/Personal_projects/PersonalFinanceTracker/build
 
 # Utility rule file for personal_finance_tracker_qt_autogen.
 
@@ -67,8 +67,8 @@ include CMakeFiles/personal_finance_tracker_qt_autogen.dir/compiler_depend.make
 include CMakeFiles/personal_finance_tracker_qt_autogen.dir/progress.make
 
 CMakeFiles/personal_finance_tracker_qt_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target personal_finance_tracker_qt"
-	/usr/bin/cmake -E cmake_autogen /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles/personal_finance_tracker_qt_autogen.dir/AutogenInfo.json ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target personal_finance_tracker_qt"
+	/usr/bin/cmake -E cmake_autogen /home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles/personal_finance_tracker_qt_autogen.dir/AutogenInfo.json ""
 
 personal_finance_tracker_qt_autogen: CMakeFiles/personal_finance_tracker_qt_autogen
 personal_finance_tracker_qt_autogen: CMakeFiles/personal_finance_tracker_qt_autogen.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/personal_finance_tracker_qt_autogen.dir/clean:
 .PHONY : CMakeFiles/personal_finance_tracker_qt_autogen.dir/clean
 
 CMakeFiles/personal_finance_tracker_qt_autogen.dir/depend:
-	cd /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build /home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles/personal_finance_tracker_qt_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/developer/Personal_projects/PersonalFinanceTracker/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/developer/Personal_projects/PersonalFinanceTracker /home/developer/Personal_projects/PersonalFinanceTracker /home/developer/Personal_projects/PersonalFinanceTracker/build /home/developer/Personal_projects/PersonalFinanceTracker/build /home/developer/Personal_projects/PersonalFinanceTracker/build/CMakeFiles/personal_finance_tracker_qt_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/personal_finance_tracker_qt_autogen.dir/depend
 
