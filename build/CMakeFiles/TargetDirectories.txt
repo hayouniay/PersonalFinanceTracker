@@ -1,0 +1,5 @@
+/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles/personal_finance_tracker.dir
+/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles/finance_tests.dir
+/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles/test.dir
+/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles/edit_cache.dir
+/home/developer/Personal_projects/QT_Projects/PersonalFinanceTracker/build/CMakeFiles/rebuild_cache.dir
