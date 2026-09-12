@@ -1,0 +1,281 @@
+name: Personal Finance Tracker CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+
+  pull_request:
+    branches:
+      - main
+      - master
+      - develop
+
+jobs:
+
+  # ---------------------------------------------------------
+  # 1. Check build dependencies and project structure
+  # ---------------------------------------------------------
+  dependency-check:
+    name: Dependency Check
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+
+          sudo apt-get install -y \
+            build-essential \
+            cmake \
+            ninja-build \
+            pkg-config \
+            libsqlite3-dev \
+            qtbase5-dev \
+            qtbase5-dev-tools
+
+      - name: Verify compiler
+        run: |
+          g++ --version
+          cmake --version
+          ninja --version
+
+      - name: Verify SQLite3
+        run: |
+          pkg-config --modversion sqlite3
+
+      - name: Verify Qt5
+        run: |
+          pkg-config --modversion Qt5Widgets
+          qmake --version
+
+      - name: Verify project files
+        run: |
+          test -f CMakeLists.txt
+          test -f Makefile
+          test -f README.md
+
+          test -f include/core/Account.hpp
+          test -f include/core/Budget.hpp
+          test -f include/core/Category.hpp
+          test -f include/core/FinanceManager.hpp
+          test -f include/core/Transaction.hpp
+
+          test -f include/storage/Database.hpp
+          test -f include/ui/Console.hpp
+
+          test -f include/qt/MainWindow.hpp
+          test -f src/qt/MainWindow.cpp
+          test -f src/qt/main_qt.cpp
+
+          echo "All required project files found."
+
+  # ---------------------------------------------------------
+  # 2. Build and test console application
+  # ---------------------------------------------------------
+  console-build:
+    name: Console Build & Tests
+    runs-on: ubuntu-24.04
+    needs: dependency-check
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install console dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential \
+            cmake \
+            ninja-build \
+            libsqlite3-dev
+
+      - name: Configure console build
+        run: |
+          cmake -S . \
+            -B build-console \
+            -G Ninja \
+            -DBUILD_QT5_GUI=OFF \
+            -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build console application
+        run: |
+          cmake --build build-console --parallel
+
+      - name: Run tests
+        run: |
+          ctest \
+            --test-dir build-console \
+            --output-on-failure
+
+      - name: Console smoke test
+        run: |
+          test -x build-console/personal_finance_tracker
+
+      - name: Create console package
+        run: |
+          mkdir -p package-console/PersonalFinanceTracker
+
+          cp build-console/personal_finance_tracker \
+             package-console/PersonalFinanceTracker/
+
+          cp -r include \
+             package-console/PersonalFinanceTracker/
+
+          cp -r data \
+             package-console/PersonalFinanceTracker/ \
+             2>/dev/null || true
+
+          cp README.md \
+             package-console/PersonalFinanceTracker/ \
+             2>/dev/null || true
+
+          tar -czf \
+            personal-finance-tracker-console.tar.gz \
+            -C package-console \
+            PersonalFinanceTracker
+
+      - name: Upload console artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: personal-finance-tracker-console
+          path: personal-finance-tracker-console.tar.gz
+
+  # ---------------------------------------------------------
+  # 3. Build and test Qt5 GUI
+  # ---------------------------------------------------------
+  qt5-build:
+    name: Qt5 GUI Build & Tests
+    runs-on: ubuntu-24.04
+    needs: console-build
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Qt5 dependencies
+        run: |
+          sudo apt-get update
+
+          sudo apt-get install -y \
+            build-essential \
+            cmake \
+            ninja-build \
+            pkg-config \
+            libsqlite3-dev \
+            qtbase5-dev \
+            qtbase5-dev-tools
+
+      - name: Verify Qt5
+        run: |
+          pkg-config --modversion Qt5Widgets
+          qmake --version
+
+      - name: Configure Qt5 build
+        run: |
+          cmake -S . \
+            -B build-qt5 \
+            -G Ninja \
+            -DBUILD_QT5_GUI=ON \
+            -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build Qt5 application
+        run: |
+          cmake --build build-qt5 --parallel
+
+      - name: Verify Qt5 executable
+        run: |
+          test -x build-qt5/personal_finance_tracker_qt
+
+      - name: Run tests
+        run: |
+          ctest \
+            --test-dir build-qt5 \
+            --output-on-failure
+
+      - name: Create Qt5 package
+        run: |
+          mkdir -p package-qt5/PersonalFinanceTracker
+
+          cp build-qt5/personal_finance_tracker_qt \
+             package-qt5/PersonalFinanceTracker/
+
+          cp -r include \
+             package-qt5/PersonalFinanceTracker/
+
+          cp -r data \
+             package-qt5/PersonalFinanceTracker/ \
+             2>/dev/null || true
+
+          cp README.md \
+             package-qt5/PersonalFinanceTracker/ \
+             2>/dev/null || true
+
+          tar -czf \
+            personal-finance-tracker-qt5.tar.gz \
+            -C package-qt5 \
+            PersonalFinanceTracker
+
+      - name: Upload Qt5 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: personal-finance-tracker-qt5
+          path: personal-finance-tracker-qt5.tar.gz
+
+  # ---------------------------------------------------------
+  # 4. Publish console artifact
+  # ---------------------------------------------------------
+  artifact-console:
+    name: Publish Console Artifact
+    runs-on: ubuntu-24.04
+    needs: console-build
+
+    steps:
+      - name: Download console artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: personal-finance-tracker-console
+          path: artifacts
+
+      - name: Verify artifact
+        run: |
+          ls -lah artifacts
+          test -f artifacts/personal-finance-tracker-console.tar.gz
+
+      - name: Re-upload verified console artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: personal-finance-tracker-console-verified
+          path: artifacts/personal-finance-tracker-console.tar.gz
+
+  # ---------------------------------------------------------
+  # 5. Publish Qt5 artifact
+  # ---------------------------------------------------------
+  artifact-qt:
+    name: Publish Qt5 Artifact
+    runs-on: ubuntu-24.04
+    needs: qt5-build
+
+    steps:
+      - name: Download Qt5 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: personal-finance-tracker-qt5
+          path: artifacts
+
+      - name: Verify artifact
+        run: |
+          ls -lah artifacts
+          test -f artifacts/personal-finance-tracker-qt5.tar.gz
+
+      - name: Re-upload verified Qt5 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: personal-finance-tracker-qt5-verified
+          path: artifacts/personal-finance-tracker-qt5.tar.gz
