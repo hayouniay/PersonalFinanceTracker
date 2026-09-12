@@ -104,4 +104,4 @@ PersonalFinanceTracker/
 
 ## Version
 
-1.0.0 — Phase 4 engine + Qt5 desktop interface.
+1.1.0 — Phase 4 engine + Qt5 desktop interface.

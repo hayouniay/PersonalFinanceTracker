@@ -3,7 +3,6 @@
 #include "services/ReportService.hpp"
 #include <cassert>
 #include <filesystem>
-#include <fstream>
 #include <iostream>
 int main() {
   const std::string p = "test_finance.db";

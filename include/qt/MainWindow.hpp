@@ -1,4 +1,5 @@
 #pragma once
+
 #include <QMainWindow>
 #include <memory>
 
@@ -11,6 +12,8 @@ class QDoubleSpinBox;
 class QLineEdit;
 class QSpinBox;
 class QTabWidget;
+class QListWidget;
+class QToolButton;
 
 class MainWindow final : public QMainWindow {
   Q_OBJECT
@@ -45,6 +48,8 @@ private:
   void buildGoalsTab();
   void buildRecurringTab();
   void buildAnalyticsTab();
+  void setupNavigation();
+  void applyTheme();
   void loadAccounts(QComboBox *combo, bool includeAll = false);
   QString currentMonth() const;
   int selectedId(QTableWidget *table) const;
@@ -52,16 +57,24 @@ private:
 
   FinanceManager &manager_;
   QTabWidget *tabs_{nullptr};
+  QListWidget *navigation_{nullptr};
+
   QLabel *incomeLabel_{nullptr};
   QLabel *expenseLabel_{nullptr};
   QLabel *netLabel_{nullptr};
   QLabel *savingsLabel_{nullptr};
+  QLabel *dashboardSummary_{nullptr};
+  QLabel *dashboardAccounts_{nullptr};
+  QLabel *dashboardGoals_{nullptr};
+  QLabel *statusLabel_{nullptr};
   QDateEdit *dashboardMonth_{nullptr};
+
   QTableWidget *transactionsTable_{nullptr};
   QTableWidget *accountsTable_{nullptr};
   QTableWidget *budgetsTable_{nullptr};
   QTableWidget *goalsTable_{nullptr};
   QTableWidget *recurringTable_{nullptr};
+
   QComboBox *transactionAccount_{nullptr};
   QComboBox *expenseAccount_{nullptr};
   QComboBox *incomeAccount_{nullptr};
@@ -71,10 +84,12 @@ private:
   QComboBox *goalSelector_{nullptr};
   QComboBox *recurringAccount_{nullptr};
   QComboBox *recurringFrequency_{nullptr};
+
   QDateEdit *transactionDate_{nullptr};
   QLineEdit *transactionCategory_{nullptr};
   QLineEdit *transactionDescription_{nullptr};
   QDoubleSpinBox *transactionAmount_{nullptr};
+
   QDateEdit *forecastMonth_{nullptr};
   QSpinBox *forecastHistory_{nullptr};
   QLabel *forecastLabel_{nullptr};

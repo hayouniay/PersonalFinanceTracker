@@ -44,3 +44,19 @@ make -j$(nproc)
 ```
 
 The GUI and console share `data/finance.db`, so changes made in one are visible to the other after refresh/restart.
+
+## Professional Qt5 interface
+
+Version 4.2 introduces a more production-oriented desktop UI:
+
+- persistent left navigation instead of a basic tab strip
+- dashboard cards for income, expenses, net cash flow and savings rate
+- account and savings-goal snapshots on the dashboard
+- consistent panels, tables, spacing, typography and status feedback
+- clearer primary/secondary/danger actions
+- improved transaction, budget, goal and recurring-transaction forms
+- budget status indicators and savings-goal progress values
+- application-wide Qt stylesheet with a restrained business dashboard look
+- console application remains unchanged and available as `personal_finance_tracker`
+
+The GUI continues to use the same SQLite database and business logic as the console application.
