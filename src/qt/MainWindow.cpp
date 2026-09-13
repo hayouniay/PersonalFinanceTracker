@@ -4,6 +4,12 @@
 #include "services/CsvService.hpp"
 #include "services/ReportService.hpp"
 #include <QApplication>
+#include <QBarCategoryAxis>
+#include <QBarSeries>
+#include <QBarSet>
+#include <QCategoryAxis>
+#include <QChart>
+#include <QChartView>
 #include <QComboBox>
 #include <QDate>
 #include <QDateEdit>
@@ -17,8 +23,11 @@
 #include <QInputDialog>
 #include <QLabel>
 #include <QLineEdit>
+#include <QLineSeries>
 #include <QListWidget>
 #include <QMessageBox>
+#include <QPainter>
+#include <QPieSeries>
 #include <QPushButton>
 #include <QSpinBox>
 #include <QStatusBar>
@@ -28,10 +37,14 @@
 #include <QTableWidgetItem>
 #include <QToolButton>
 #include <QVBoxLayout>
+#include <QValueAxis>
 #include <algorithm>
 #include <cmath>
 #include <exception>
+#include <map>
 #include <stdexcept>
+
+using namespace QtCharts;
 
 namespace {
 
@@ -171,6 +184,7 @@ void MainWindow::applyTheme() {
         QLabel#metricTitle { color: #7a8793; font-size: 12px; font-weight: 600; }
         QLabel#metricValue { color: #17212b; font-size: 23px; font-weight: 700; }
         QLabel#panelTitle { font-size: 15px; font-weight: 700; color: #263238; }
+        QLabel#sectionTitle { font-size: 16px; font-weight: 700; color: #263238; padding-top: 4px; }
         QGroupBox {
             background: white;
             border: 1px solid #e1e7ec;
@@ -365,6 +379,32 @@ void MainWindow::buildDashboardTab() {
   metrics->addWidget(savingsLabel_->parentWidget());
   v->addLayout(metrics);
 
+  auto *chartsTitle = new QLabel("Financial trends", w);
+  chartsTitle->setObjectName("sectionTitle");
+  v->addWidget(chartsTitle);
+
+  auto *chartsGrid = new QGridLayout;
+  chartsGrid->setSpacing(16);
+
+  incomeExpenseChart_ = new QChartView(w);
+  incomeExpenseChart_->setMinimumHeight(280);
+  incomeExpenseChart_->setRenderHint(QPainter::Antialiasing);
+  cashFlowChart_ = new QChartView(w);
+  cashFlowChart_->setMinimumHeight(280);
+  cashFlowChart_->setRenderHint(QPainter::Antialiasing);
+  expenseCategoryChart_ = new QChartView(w);
+  expenseCategoryChart_->setMinimumHeight(280);
+  expenseCategoryChart_->setRenderHint(QPainter::Antialiasing);
+  accountBalanceChart_ = new QChartView(w);
+  accountBalanceChart_->setMinimumHeight(280);
+  accountBalanceChart_->setRenderHint(QPainter::Antialiasing);
+
+  chartsGrid->addWidget(incomeExpenseChart_, 0, 0);
+  chartsGrid->addWidget(cashFlowChart_, 0, 1);
+  chartsGrid->addWidget(expenseCategoryChart_, 1, 0);
+  chartsGrid->addWidget(accountBalanceChart_, 1, 1);
+  v->addLayout(chartsGrid);
+
   auto *lower = new QHBoxLayout;
   lower->setSpacing(16);
   QVBoxLayout *accountsBody = nullptr;
@@ -393,6 +433,7 @@ void MainWindow::buildDashboardTab() {
   dashboardSummary_->setTextFormat(Qt::RichText);
   summaryBody->addWidget(dashboardSummary_);
   v->addWidget(summaryPanel);
+
   v->addStretch();
 
   connect(refresh, &QPushButton::clicked, this, &MainWindow::refreshDashboard);
@@ -804,6 +845,141 @@ void MainWindow::refreshDashboard() {
       QString("%1 accounts  •  %2 transactions  •  Database ready")
           .arg(manager_.listAccounts().size())
           .arg(manager_.listTransactions().size()));
+
+  refreshDashboardCharts();
+}
+
+void MainWindow::refreshDashboardCharts() {
+  if (!incomeExpenseChart_ || !cashFlowChart_ || !expenseCategoryChart_ ||
+      !accountBalanceChart_)
+    return;
+
+  const QDate selected =
+      dashboardMonth_->date().addDays(1 - dashboardMonth_->date().day());
+  const int months = 6;
+
+  auto clearChart = [](QChartView *view) {
+    if (!view)
+      return;
+    view->setChart(new QChart());
+    view->chart()->setAnimationOptions(QChart::NoAnimation);
+    view->chart()->legend()->setVisible(true);
+  };
+
+  // Monthly income vs expenses: a real time-series curve over the last six
+  // months.
+  clearChart(incomeExpenseChart_);
+  auto *trend = incomeExpenseChart_->chart();
+  trend->setTitle("Income vs expenses — last 6 months");
+  auto *incomeSeries = new QLineSeries(trend);
+  incomeSeries->setName("Income");
+  auto *expenseSeries = new QLineSeries(trend);
+  expenseSeries->setName("Expenses");
+  QStringList monthLabels;
+  double maxTrend = 0.0;
+  for (int i = months - 1; i >= 0; --i) {
+    const QDate monthDate = selected.addMonths(-i);
+    const QString month = monthDate.toString("yyyy-MM");
+    const double income = manager_.monthlyIncome(month.toStdString());
+    const double expense = manager_.monthlyExpenses(month.toStdString());
+    const int x = months - 1 - i;
+    incomeSeries->append(x, income);
+    expenseSeries->append(x, expense);
+    monthLabels << monthDate.toString("MMM yy");
+    maxTrend = std::max(maxTrend, std::max(income, expense));
+  }
+  trend->addSeries(incomeSeries);
+  trend->addSeries(expenseSeries);
+  auto *trendAxisX = new QCategoryAxis(trend);
+  for (int i = 0; i < monthLabels.size(); ++i)
+    trendAxisX->append(monthLabels.at(i), i + 0.5);
+  trendAxisX->setRange(-0.5, months - 0.5);
+  trend->setAxisX(trendAxisX, incomeSeries);
+  trend->setAxisX(trendAxisX, expenseSeries);
+  auto *trendAxisY = new QValueAxis(trend);
+  trendAxisY->setTitleText("Amount (€)");
+  trendAxisY->setRange(0, maxTrend > 0 ? maxTrend * 1.15 : 100);
+  trend->setAxisY(trendAxisY, incomeSeries);
+  trend->setAxisY(trendAxisY, expenseSeries);
+  trend->legend()->setAlignment(Qt::AlignBottom);
+
+  // Net cash flow curve.
+  clearChart(cashFlowChart_);
+  auto *cash = cashFlowChart_->chart();
+  cash->setTitle("Net cash flow — last 6 months");
+  auto *netSeries = new QLineSeries(cash);
+  netSeries->setName("Net cash flow");
+  double maxAbsNet = 0.0;
+  for (int i = months - 1; i >= 0; --i) {
+    const QDate monthDate = selected.addMonths(-i);
+    const QString month = monthDate.toString("yyyy-MM");
+    const double net = manager_.monthlyIncome(month.toStdString()) -
+                       manager_.monthlyExpenses(month.toStdString());
+    const int x = months - 1 - i;
+    netSeries->append(x, net);
+    maxAbsNet = std::max(maxAbsNet, std::abs(net));
+  }
+  cash->addSeries(netSeries);
+  auto *cashAxisX = new QCategoryAxis(cash);
+  for (int i = 0; i < monthLabels.size(); ++i)
+    cashAxisX->append(monthLabels.at(i), i + 0.5);
+  cashAxisX->setRange(-0.5, months - 0.5);
+  cash->setAxisX(cashAxisX, netSeries);
+  auto *cashAxisY = new QValueAxis(cash);
+  cashAxisY->setTitleText("Net (€)");
+  const double netRange = maxAbsNet > 0 ? maxAbsNet * 1.2 : 100;
+  cashAxisY->setRange(-netRange, netRange);
+  cash->setAxisY(cashAxisY, netSeries);
+  cash->legend()->setVisible(false);
+
+  // Expense composition for the selected month.
+  clearChart(expenseCategoryChart_);
+  auto *pieChart = expenseCategoryChart_->chart();
+  pieChart->setTitle(
+      QString("Expenses by category — %1").arg(selected.toString("MMM yyyy")));
+  auto *pie = new QPieSeries(pieChart);
+  std::map<std::string, double> categoryTotals;
+  for (const auto &transaction : manager_.listTransactions()) {
+    if (transaction.type() == TransactionType::Expense &&
+        transaction.date().rfind(selected.toString("yyyy-MM").toStdString(),
+                                 0) == 0) {
+      categoryTotals[transaction.category()] += transaction.amount();
+    }
+  }
+  for (const auto &entry : categoryTotals) {
+    if (entry.second > 0)
+      pie->append(QString::fromStdString(entry.first), entry.second);
+  }
+  if (pie->count() == 0)
+    pie->append("No expenses", 1.0);
+  pie->setLabelsVisible(true);
+  pieChart->addSeries(pie);
+  pieChart->legend()->setAlignment(Qt::AlignRight);
+
+  // Current account balances.
+  clearChart(accountBalanceChart_);
+  auto *accountChart = accountBalanceChart_->chart();
+  accountChart->setTitle("Current account balances");
+  auto *balances = new QBarSeries(accountChart);
+  auto *balanceSet = new QBarSet("Balance (€)");
+  QStringList accountLabels;
+  double maxBalance = 0.0;
+  for (const auto &account : manager_.listAccounts()) {
+    *balanceSet << account.balance;
+    accountLabels << QString::fromStdString(account.name);
+    maxBalance = std::max(maxBalance, std::abs(account.balance));
+  }
+  balances->append(balanceSet);
+  accountChart->addSeries(balances);
+  auto *balanceAxisX = new QBarCategoryAxis(accountChart);
+  balanceAxisX->append(accountLabels);
+  accountChart->setAxisX(balanceAxisX, balances);
+  auto *balanceAxisY = new QValueAxis(accountChart);
+  balanceAxisY->setTitleText("Balance (€)");
+  const double balanceRange = maxBalance > 0 ? maxBalance * 1.2 : 100;
+  balanceAxisY->setRange(-balanceRange, balanceRange);
+  accountChart->setAxisY(balanceAxisY, balances);
+  accountChart->legend()->setVisible(false);
 }
 
 void MainWindow::refreshAll() {

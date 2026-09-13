@@ -14,6 +14,9 @@ class QSpinBox;
 class QTabWidget;
 class QListWidget;
 class QToolButton;
+namespace QtCharts {
+class QChartView;
+}
 
 class MainWindow final : public QMainWindow {
   Q_OBJECT
@@ -38,6 +41,7 @@ private slots:
   void refreshDashboard();
   void refreshForecast();
   void generateChart();
+  void refreshDashboardCharts();
 
 private:
   void buildUi();
@@ -68,6 +72,10 @@ private:
   QLabel *dashboardGoals_{nullptr};
   QLabel *statusLabel_{nullptr};
   QDateEdit *dashboardMonth_{nullptr};
+  QtCharts::QChartView *incomeExpenseChart_{nullptr};
+  QtCharts::QChartView *cashFlowChart_{nullptr};
+  QtCharts::QChartView *expenseCategoryChart_{nullptr};
+  QtCharts::QChartView *accountBalanceChart_{nullptr};
 
   QTableWidget *transactionsTable_{nullptr};
   QTableWidget *accountsTable_{nullptr};

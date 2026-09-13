@@ -1,4 +1,4 @@
-QT += widgets
+QT += widgets charts
 CONFIG += c++17
 TEMPLATE = app
 TARGET = personal_finance_tracker_qt

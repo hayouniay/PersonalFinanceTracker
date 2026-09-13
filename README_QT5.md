@@ -6,7 +6,7 @@ This project keeps the original console application and adds a Qt5 desktop GUI. 
 
 ```bash
 sudo apt update
-sudo apt install -y build-essential cmake qtbase5-dev qtbase5-dev-tools libsqlite3-dev
+sudo apt install -y build-essential cmake qtbase5-dev qtbase5-dev-tools qtcharts5-dev libsqlite3-dev
 ```
 
 For WSL2 GUI display, use WSLg (included with current Windows 11 WSL). On older setups, configure an X server separately.
@@ -33,6 +33,9 @@ make
 make test
 make run       # console
 make run-qt    # Qt5 GUI
+
+# After make build, binaries are copied to dist/
+# make run and make run-qt launch directly from dist/
 ```
 
 ## qmake
@@ -44,6 +47,17 @@ make -j$(nproc)
 ```
 
 The GUI and console share `data/finance.db`, so changes made in one are visible to the other after refresh/restart.
+
+## Dashboard charts
+
+The Dashboard now includes live Qt Charts based on the selected month and shared SQLite database:
+
+- income vs expenses over six months
+- net cash-flow trend over six months
+- expense distribution by category
+- current account balances
+
+Charts refresh automatically with the dashboard.
 
 ## Professional Qt5 interface
 

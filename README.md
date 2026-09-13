@@ -20,7 +20,7 @@ C++17 personal finance application with **both a Linux/WSL console interface and
 
 ```bash
 sudo apt update
-sudo apt install -y build-essential cmake qtbase5-dev qtbase5-dev-tools libsqlite3-dev
+sudo apt install -y build-essential cmake qtbase5-dev qtbase5-dev-tools qtcharts5-dev libsqlite3-dev
 ```
 
 Current Windows 11 WSLg is recommended for running the Qt GUI.
@@ -53,6 +53,9 @@ make
 make test
 make run       # console version
 make run-qt    # Qt5 version
+
+# Build places both binaries in dist/
+# Run targets are independent and launch directly from dist/
 ```
 
 ## qmake
@@ -102,6 +105,17 @@ PersonalFinanceTracker/
 └── docs/
 ```
 
+## Dashboard charts
+
+Version 1.2 adds live Qt Charts to the dashboard:
+
+- six-month income vs expenses curve
+- six-month net cash-flow curve
+- selected-month expense composition by category
+- current account-balance bar chart
+
+All dashboard charts are generated from the shared SQLite data.
+
 ## Version
 
-1.1.0 — Phase 4 engine + Qt5 desktop interface.
+1.2.0 — Phase 4 engine + Qt5 desktop interface.

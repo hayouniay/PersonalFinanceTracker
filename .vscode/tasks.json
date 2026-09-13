@@ -189,9 +189,10 @@
             "label": "Finance - Run Console",
             "type": "shell",
             "command": "make run",
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
+            "dependsOn": [
+                "Finance - Build Console"
+            ],
+            "dependsOrder": "sequence",
             "problemMatcher": [],
             "presentation": {
                 "reveal": "always",
@@ -206,10 +207,11 @@
         {
             "label": "Finance - Run Qt5 GUI",
             "type": "shell",
-            "command": "make run_qt",
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
+            "command": "make run-qt",
+            "dependsOn": [
+                "Finance - Build Qt5 GUI"
+            ],
+            "dependsOrder": "sequence",
             "problemMatcher": [],
             "presentation": {
                 "reveal": "always",
