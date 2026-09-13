@@ -188,11 +188,10 @@
         {
             "label": "Finance - Run Console",
             "type": "shell",
-            "command": "./build/personal_finance_tracker",
-            "dependsOn": [
-                "Finance - Build Console"
-            ],
-            "dependsOrder": "sequence",
+            "command": "make run",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "problemMatcher": [],
             "presentation": {
                 "reveal": "always",
@@ -207,11 +206,10 @@
         {
             "label": "Finance - Run Qt5 GUI",
             "type": "shell",
-            "command": "./build/personal_finance_tracker_qt",
-            "dependsOn": [
-                "Finance - Build Qt5 GUI"
-            ],
-            "dependsOrder": "sequence",
+            "command": "make run_qt",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "problemMatcher": [],
             "presentation": {
                 "reveal": "always",
