@@ -118,4 +118,4 @@ All dashboard charts are generated from the shared SQLite data.
 
 ## Version
 
-1.2.0 — Phase 4 engine + Qt5 desktop interface.
+1.2.0 — engine + Qt5 desktop interface.
