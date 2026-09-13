@@ -171,7 +171,7 @@ jobs:
             libsqlite3-dev \
             qtbase5-dev \
             qtbase5-dev-tools\
-            qtcharts5-dev
+            libqt5charts5-dev
 
       - name: Verify Qt5
         run: |
