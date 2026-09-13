@@ -20,7 +20,7 @@ C++17 personal finance application with **both a Linux/WSL console interface and
 
 ```bash
 sudo apt update
-sudo apt install -y build-essential cmake qtbase5-dev qtbase5-dev-tools qtcharts5-dev libsqlite3-dev
+sudo apt install -y build-essential cmake qtbase5-dev qtbase5-dev-tools libqt5charts5-dev libsqlite3-dev
 ```
 
 Current Windows 11 WSLg is recommended for running the Qt GUI.
