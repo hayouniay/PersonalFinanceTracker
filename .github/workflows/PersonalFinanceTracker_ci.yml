@@ -170,11 +170,13 @@ jobs:
             pkg-config \
             libsqlite3-dev \
             qtbase5-dev \
-            qtbase5-dev-tools
+            qtbase5-dev-tools\
+            qtcharts5-dev
 
       - name: Verify Qt5
         run: |
           pkg-config --modversion Qt5Widgets
+          pkg-config --modversion Qt5Charts
           qmake --version
 
       - name: Configure Qt5 build
