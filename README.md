@@ -83,8 +83,9 @@ PersonalFinanceTracker/
 ├── CMakeLists.txt
 ├── Makefile
 ├── PersonalFinanceTrackerQt.pro
-├── build_wsl.sh
-├── build_wsl_qt.sh
+├── bin/
+│   ├── build_wsl_qt.sh
+│   └── build_wsl.sh
 ├── include/
 │   ├── core/
 │   ├── services/
